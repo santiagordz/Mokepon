@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@font-face {
+    font-family: Eight-Bit;
+    src: url(./Fonts/8-BIT\ WONDER.TTF);
+}
+body {
+    user-select: none;
+    height: 100%;
+    background-color: #579BB1;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+}
+
+#seleccionar-mascota{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    color: #F8F4EA;
+    font-size: min(12vw, 110px);
+    font-family: 'Rampart One', cursive;
+    text-align: center;
+    margin: 0;
+}
+
+.subtitulo{
+    font-family: 'Rampart One', cursive;
+    color: #F8F4EA;
+    margin-top: 10px;
+    text-align: center;
+    font-size: min(8vw, 60px);
+}
+
+.tarjetas, .tarjetas-ataques{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tarjeta-de-mokepon{
+    width: min(30vw, 400px);
+    height: min(25vh, 400px);
+    background-color: #E1D7C6;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+}
+
+.tarjeta-de-mokepon:hover{
+    background-color: black;
+}
+
+.tarjeta-de-mokepon p{
+    width: 50%;
+    text-align: center;
+    font-size: 2.2vw;
+    color: orange;
+
+}
+
+.tarjeta-de-mokepon img{
+    width: min(13vw, 200px);
+}
+
+#boton-mascota{
+    color: #f0f0f0;
+    background-color: orange;
+    border-radius: 30px;
+    border: 2px solid #F8F4EA;
+    
+    margin-top: 5vh;
+    width: min(30vw, 350px);
+    height: 8vh;
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: max(2vw,16px)
+}
+
+#boton-mascota:hover{
+    background-color: black;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    background-color: black;
+}
+
+#ver-mapa{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#mapa-con-botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+#mapa{
+    border: 2px solid white;
+}
+
+#botones-movimiento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.boton-movimiento{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin: 10px 0px;
+    width: 15vw;
+    min-width: 80px;
+    max-width: 120px;
+    height: 8vh;
+}
+
+.boton-movimiento:hover{
+    background-color: black;
+    color: white;
+}
+
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque{
+    width: 15vw;
+    height: 10vh;
+    font-size: 2.5vw;
+    border: none;
+    border-radius: 20px;
+    background-color: #F8F4EA;
+    padding: 10px;
+    box-sizing: border-box;
+    border-color: transparent;
+}
+
+.boton-de-ataque:hover{
+    background-color: black;
+}
+
+#mensajes{
+    width: 25vw;
+    height: 20vh;
+    background-color: #E1D7C6;
+    padding: 1vw;
+    margin-top: 5vh;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Rampart One', cursive;
+    font-size: 5vw;
+}
+
+#mensajes p{
+    margin: 0;
+    font-size: 2.5vw;
+    color: black;
+}
+
+#resultado{
+    text-align: center;
+}
+
+#reiniciar{
+    width: 100%;
+    margin-top: 2vh;
+}
+
+#boton-reiniciar{
+    margin-left: 25%;
+    background-color: orange;
+    border-radius: 15px;
+    border: 2px solid white;
+    width: 13vw;
+    height: 4vh;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+
+#boton-reiniciar:hover{
+    background-color: black;
+}
+
+.ataques{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-family: Eight-Bit;
+    align-items: center;
+}
+
+
+#vidas-jugador, #vidas-enemigo{
+    font-size: 4vw;
+    margin-bottom: 0px;
+}
+
+#mascota-jugador, #mascota-enemigo{
+    font-size: 2vw;
+}
+
+.ataques-jugador, .ataques-enemigo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ataques-del-jugador, #ataques-del-enemigo{
+    font-size: 1.5vw;
+}
+
+@media (max-width: 912px){
+    .subtitulo{
+        margin-bottom: 20px;
+    }
+    .tarjetas{
+        flex-direction: column;
+        margin-top: 3vh;
+        gap: 15px;
+    }
+    .tarjeta-de-mokepon{
+        width: 50vw;
+        height: 18vh;
+    }
+    .tarjeta-de-mokepon p{
+        width: 50%;
+        font-size: 4.5vw;
+    }
+    .tarjeta-de-mokepon img{
+        width: 50%;
+    }
+    #boton-mascota{
+        width: 50vw;
+    }
+    #botones-ataques{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .boton-ataque{
+        width: 200px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 360px){
+    #boton-mascota{
+        width: 50vw;
+    }
+
+    #botones-movimiento-inferiores{
+        display: flex;
+        flex-direction: column;
+    }
+    .boton-movimiento{
+        margin: 5px;
+    }
+}
+
+@media (min-width: 1300px){
+    #mapa-con-botones{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-left: 8vw;
+        box-sizing: border-box;
+    }
+    #botones-movimiento{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5vw;
+
+    }
+    #botones-movimiento-inferiores{
+        display: flex;
+    }
+    /* .boton-movimiento{
+        
+    } */
+}
